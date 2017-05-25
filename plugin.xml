@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="Gladiator" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.Gladiator" resourcebundle="content/Gladiator/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="Gladiator" label="${Launcher.Gladiator}" command="mantleXulHandler.openUrl('${Launcher.Gladiator}','${Launcher.Gladiator_TOOLTIP}','plugin/Gladiator/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/Gladiator/static" localFolder="static"/>
+		<static-path url="/Gladiator/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>Gladiator</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="Gladiator"
+		title="Gladiator"
+		type="Gladiator"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="Gladiator_main" anchor="tools-submenu" label="Gladiator" command="content/Gladiator/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>

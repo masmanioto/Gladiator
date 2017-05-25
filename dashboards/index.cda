@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="dummy" type="sql.jndi">
+         <Jndi/>
+      </Connection>
+      <Connection id="Vendas por AnoQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/SteelWheels</Catalog>
+         <Jndi>SampleData</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="dummy" id="dummy" type="sql">
+      <Name>dummy</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query/>
+   </DataAccess>
+   <DataAccess access="public" connection="Vendas por AnoQuery" id="Vendas por AnoQuery"
+               type="mdx">
+      <Name>Vendas por AnoQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select NON EMPTY({Descendants([Time].[All Years] ,[Time].[Years])}) on ROWS, 
+ NON EMPTY({[Measures].[Sales]}) on Columns 
+ from [SteelWheelsSales]]]></Query>
+   </DataAccess>
+</CDADescriptor>

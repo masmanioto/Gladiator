@@ -4,27 +4,224 @@
    {
     "id": "OTHERCOMPONENTS",
     "name": "Others",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Others"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "d4c47042-4999-0a30-cb4f-361ab33ffab2",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Dash01"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": ""
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "Vendas por AnoQuery"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function (){\nHighcharts.chart('grafico1', {\n\n    title: {\n        text: 'Solar Employment Growth by Sector, 2010-2016'\n    },\n\n    subtitle: {\n        text: 'Source: thesolarfoundation.com'\n    },\n\n    yAxis: {\n        title: {\n            text: 'Number of Employees'\n        }\n    },\n    legend: {\n        layout: 'vertical',\n        align: 'right',\n        verticalAlign: 'middle'\n    },\n\n    plotOptions: {\n        series: {\n            pointStart: 2010\n        }\n    },\n\n    series: [{\n        name: 'Installation',\n        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]\n    }, {\n        name: 'Manufacturing',\n        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]\n    }, {\n        name: 'Sales & Distribution',\n        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]\n    }, {\n        name: 'Project Development',\n        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]\n    }, {\n        name: 'Other',\n        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]\n    }]\n\n});\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "dbc934e3-bfbe-5ccd-86ea-3aab66aff7e5",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Dash02"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": ""
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "Vendas por AnoQuery"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function (){\nHighcharts.chart('grafico2', {\n    chart: {\n        type: 'column'\n    },\n    title: {\n        text: 'Monthly Average Rainfall'\n    },\n    subtitle: {\n        text: 'Source: WorldClimate.com'\n    },\n    xAxis: {\n        categories: [\n            'Jan',\n            'Feb',\n            'Mar',\n            'Apr',\n            'May',\n            'Jun',\n            'Jul',\n            'Aug',\n            'Sep',\n            'Oct',\n            'Nov',\n            'Dec'\n        ],\n        crosshair: true\n    },\n    yAxis: {\n        min: 0,\n        title: {\n            text: 'Rainfall (mm)'\n        }\n    },\n    tooltip: {\n        headerFormat: '<span style=\"font-size:10px\">{point.key}</span><table>',\n        pointFormat: '<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>' +\n            '<td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>',\n        footerFormat: '</table>',\n        shared: true,\n        useHTML: true\n    },\n    plotOptions: {\n        column: {\n            pointPadding: 0.2,\n            borderWidth: 0\n        }\n    },\n    series: [{\n        name: 'Tokyo',\n        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]\n\n    }, {\n        name: 'New York',\n        data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]\n\n    }, {\n        name: 'London',\n        data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]\n\n    }, {\n        name: 'Berlin',\n        data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]\n\n    }]\n});\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
     "type": "Label",
     "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "Others",
+      "value": "Selects",
       "type": "Label"
      }
     ]
    },
    {
-    "id": "d4c47042-4999-0a30-cb4f-361ab33ffab2",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
-    "parent": "OTHERCOMPONENTS",
+    "id": "ee6d0fdd-571d-0a3a-2acb-95382ccb0e33",
+    "type": "ComponentsSelect",
+    "typeDesc": "Select Component",
+    "parent": "SELECTORS",
     "properties": [
      {
       "name": "name",
-      "value": "Dash01",
+      "value": "select_mes",
       "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "param_mes",
+      "type": "Parameter"
      },
      {
       "name": "listeners",
@@ -37,9 +234,14 @@
       "type": "ValuesArray"
      },
      {
-      "name": "resultvar",
+      "name": "externalPlugin",
       "value": "",
-      "type": "Result"
+      "type": "externalPluginCustom"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "dataSource",
@@ -47,9 +249,9 @@
       "type": "Datasource"
      },
      {
-      "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "name": "valuesArray",
+      "value": "[]",
+      "type": "ValuesArray"
      },
      {
       "name": "priority",
@@ -63,7 +265,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "",
+      "value": "${h:filter_select_mes}",
       "type": "HtmlObject"
      },
      {
@@ -78,7 +280,7 @@
      },
      {
       "name": "postExecution",
-      "value": "function (){\nHighcharts.chart('grafico1', {\n\n    title: {\n        text: 'Solar Employment Growth by Sector, 2010-2016'\n    },\n\n    subtitle: {\n        text: 'Source: thesolarfoundation.com'\n    },\n\n    yAxis: {\n        title: {\n            text: 'Number of Employees'\n        }\n    },\n    legend: {\n        layout: 'vertical',\n        align: 'right',\n        verticalAlign: 'middle'\n    },\n\n    plotOptions: {\n        series: {\n            pointStart: 2010\n        }\n    },\n\n    series: [{\n        name: 'Installation',\n        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]\n    }, {\n        name: 'Manufacturing',\n        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]\n    }, {\n        name: 'Sales & Distribution',\n        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]\n    }, {\n        name: 'Project Development',\n        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]\n    }, {\n        name: 'Other',\n        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]\n    }]\n\n});\n} ",
+      "value": "function() {\n $('#filter_select_mes select').addClass('select2_single ');    \n        $(\"#filter_select_mes select\").select2({\n            placeholder: \"Selecione...\",\n            allowClear: false\n        });\n} ",
       "type": "JavaScript"
      },
      {
@@ -97,23 +299,33 @@
       "type": "JavaScript"
      },
      {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "ExtraOptionsArray"
+     },
+     {
       "name": "tooltip",
       "value": "",
       "type": "Html"
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Select Component"
    },
    {
-    "id": "dbc934e3-bfbe-5ccd-86ea-3aab66aff7e5",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
-    "parent": "OTHERCOMPONENTS",
+    "id": "065e557b-ccf5-22cc-4cea-959978c4148b",
+    "type": "ComponentsSelect",
+    "typeDesc": "Select Component",
+    "parent": "SELECTORS",
     "properties": [
      {
       "name": "name",
-      "value": "Dash02",
+      "value": "select_ano",
       "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "param_ano",
+      "type": "Parameter"
      },
      {
       "name": "listeners",
@@ -126,9 +338,14 @@
       "type": "ValuesArray"
      },
      {
-      "name": "resultvar",
+      "name": "externalPlugin",
       "value": "",
-      "type": "Result"
+      "type": "externalPluginCustom"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "dataSource",
@@ -136,9 +353,9 @@
       "type": "Datasource"
      },
      {
-      "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "name": "valuesArray",
+      "value": "[]",
+      "type": "ValuesArray"
      },
      {
       "name": "priority",
@@ -152,7 +369,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "",
+      "value": "${h:filter_select_ano}",
       "type": "HtmlObject"
      },
      {
@@ -167,7 +384,7 @@
      },
      {
       "name": "postExecution",
-      "value": "function (){\nHighcharts.chart('grafico2', {\n    chart: {\n        type: 'column'\n    },\n    title: {\n        text: 'Monthly Average Rainfall'\n    },\n    subtitle: {\n        text: 'Source: WorldClimate.com'\n    },\n    xAxis: {\n        categories: [\n            'Jan',\n            'Feb',\n            'Mar',\n            'Apr',\n            'May',\n            'Jun',\n            'Jul',\n            'Aug',\n            'Sep',\n            'Oct',\n            'Nov',\n            'Dec'\n        ],\n        crosshair: true\n    },\n    yAxis: {\n        min: 0,\n        title: {\n            text: 'Rainfall (mm)'\n        }\n    },\n    tooltip: {\n        headerFormat: '<span style=\"font-size:10px\">{point.key}</span><table>',\n        pointFormat: '<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>' +\n            '<td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>',\n        footerFormat: '</table>',\n        shared: true,\n        useHTML: true\n    },\n    plotOptions: {\n        column: {\n            pointPadding: 0.2,\n            borderWidth: 0\n        }\n    },\n    series: [{\n        name: 'Tokyo',\n        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]\n\n    }, {\n        name: 'New York',\n        data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]\n\n    }, {\n        name: 'London',\n        data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]\n\n    }, {\n        name: 'Berlin',\n        data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]\n\n    }]\n});\n} ",
+      "value": "function() {\n $('#filter_select_ano select').addClass('select2_single ');    \n        $(\"#filter_select_ano select\").select2({\n            placeholder: \"Selecione...\",\n            allowClear: false\n        });\n} ",
       "type": "JavaScript"
      },
      {
@@ -186,12 +403,99 @@
       "type": "JavaScript"
      },
      {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "ExtraOptionsArray"
+     },
+     {
       "name": "tooltip",
       "value": "",
       "type": "Html"
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Select Component"
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "115f0848-25ff-31df-6bbf-f511d815dc5c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "param_mes",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "public",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ],
+    "rowName": "Simple Parameter"
+   },
+   {
+    "id": "ccef3107-ca7f-c507-6714-f70eafd57be0",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "param_ano",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "public",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ],
+    "rowName": "Simple Parameter"
    }
   ]
  },
@@ -285,103 +589,237 @@
    {
     "id": "MDX",
     "name": "MDX Queries",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "MDX Queries",
-      "type": "Label"
+      "type": "Label",
+      "value": "MDX Queries"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "ea17863e-46eb-e0c8-0e32-648a41fe9633",
-    "type": "Componentsmdx_mondrianJndi",
-    "typeDesc": "mdx over mondrianJndi",
+    "meta": "CDA",
+    "meta_conntype": "mondrian.jndi",
+    "meta_datype": "mdx",
     "parent": "MDX",
     "properties": [
      {
       "name": "name",
-      "value": "Vendas por AnoQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "Vendas por AnoQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "SampleData",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "SampleData"
      },
      {
       "name": "catalog",
-      "value": "mondrian:/SteelWheels",
-      "type": "MondrianCatalog"
+      "type": "MondrianCatalog",
+      "value": "mondrian:/SteelWheels"
      },
      {
       "name": "query",
-      "value": " select NON EMPTY({Descendants([Time].[All Years] ,[Time].[Years])}) on ROWS, \n NON EMPTY({[Measures].[Sales]}) on Columns \n from [SteelWheelsSales]",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": " select NON EMPTY({Descendants([Time].[All Years] ,[Time].[Years])}) on ROWS, \n NON EMPTY({[Measures].[Sales]}) on Columns \n from [SteelWheelsSales]"
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "bandedMode",
-      "value": "compact",
-      "type": "BandedMode"
+      "type": "BandedMode",
+      "value": "compact"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "mondrian.jndi",
-    "meta_datype": "mdx"
+    "type": "Componentsmdx_mondrianJndi",
+    "typeDesc": "mdx over mondrianJndi"
    }
   ]
  },
  "filename": "/system/Gladiator/dashboards/index.cdfde",
  "layout": {
   "rows": [
+   {
+    "id": "3c145ee6-5564-5e4d-ee1a-2ff6e59158b4",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "parametros"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "a63c4fcb-c2de-ee90-76f9-cab7861006ea",
+    "parent": "3c145ee6-5564-5e4d-ee1a-2ff6e59158b4",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "10"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "f9c83642-0bc4-9c76-f9d5-86d323aaede8",
+    "parent": "a63c4fcb-c2de-ee90-76f9-cab7861006ea",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "                            <!--earning graph start-->\n                            <section class=\"panel\">\n                                <header class=\"panel-heading\">\n                                    Parâmetros\n                                </header>\n                                <div class=\"panel-body\">\n                                <!--    <div id=\"grafico1\" style=\"min-width: 100%; height: 400px; margin: 0 auto\"></div>-->\n                                \n                                        <form class=\"form-horizontal form-label-right\">\n                                            <div class=\"form-group\">\n                                                <div class=\"row\">\n                                                 <label class=\"control-label col-xs-3 col-sm-1\">Ano</label>\n                                                    <div class=\"col-md-4\" id=\"filter_select_ano\"></div>\n                                                <label class=\"control-label col-xs-3 col-sm-1\">Mês</label>\n                                                    <div class=\"col-md-4\" id=\"filter_select_mes\"></div>\n                                                </div>\n                                            </div>\n                                        </form>\n                                </div>\n                            </section>\n                            <!--earning graph end-->\n "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
    {
     "id": "c2d1247c-3734-ad4b-4e4f-246cf4e4cfc5",
     "parent": "UnIqEiD",
@@ -629,7 +1067,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "                            <!--earning graph start-->\n                            <section class=\"panel\">\n                                <header class=\"panel-heading\">\n                                    Grafico 1\n                                </header>\n                                <div class=\"panel-body\">\n                                    <div id=\"grafico2\" style=\"min-width: 100%; height: 400px; margin: 0 auto\"></div>\n                                </div>\n                            </section>\n                            <!--earning graph end-->\n "
+      "value": "                            <!--earning graph start-->\n                            <section class=\"panel\">\n                                <header class=\"panel-heading\">\n                                    Grafico 2\n                                </header>\n                                <div class=\"panel-body\">\n                                    <div id=\"grafico2\" style=\"min-width: 100%; height: 400px; margin: 0 auto\"></div>\n                                </div>\n                            </section>\n                            <!--earning graph end-->\n "
      },
      {
       "name": "fontSize",
